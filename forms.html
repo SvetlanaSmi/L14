@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Формы</title>
+</head>
+<body>
+    <h1>Регистрация в библиотеке</h1>
+    <form action="request.php" method="POST" enctype="application/x-www-form-urlencoded">
+       <fieldset>
+        <fieldset> 
+            <legend>Контактные данные</legend>
+                <div class="box">
+                    <div class="column">     
+                        <div><label for="fio">ФИО</label></div>
+                        <div><label for="mail">E-mail</label></div>
+                        <div><label for="pass">Пароль</label></div>
+                        <div><label for="site">Адрес сайта</label></div>
+                    </div>
+
+                    <div class="field">
+                        <div><input type="text" name="fio" placeholder="ФИО" required id="fio"></div>
+                        <div><input type="email" name="email" placeholder="Email" id="mail" required></div>
+                        <div><input type="password" name="password" required id="pass"></div>
+                        <div><input type="text" name="site" placeholder="https://" id="site" optional></div>
+
+                    </div>
+                </div>  
+        </fieldset>
+        <fieldset>
+            <legend>Дополнительные данные</legend>
+                
+            <div class="box">
+                <div class="column"> 
+                    <div><label for="sel">Пол</label></div>
+                    <div> <label for="textarea">О себе</label></div>
+            
+                </div>
+
+                <div class="field">
+                    <div>
+                        <select name="sex" size="1" id="sel">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select> 
+                    </div>
+                    <div><textarea cols="20" rows="3" wrap="soft" placeholder="Напишите о себе" value="about" id="textarea"></textarea></div>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Предпочтения в литературе</legend>
+                <div class="checkboxes">
+                    <input id="classic" type="checkbox" name="checkbox[]"> 
+                    <label for="classics"></label>
+                    <label for="classic">Классическая литература</label><br>
+                </div>
+                <div class="checkboxes">
+                    <input id="science" type="checkbox" name="checkbox[]">
+                    <label for="sciences"></label> 
+                    <label for="science">Научная фантастика</label><br>
+                </div>
+                <div class="checkboxes">
+                    <input id="detective" type="checkbox" name="checkbox[]"> 
+                    <label for="detectives"></label>
+                    <label for="detective">Детективы</label>
+                </div>
+            </fieldset>
+        
+        <fieldset>
+            <legend>Согласны ли Вы с <br>правилами сайта?</legend>
+                <div class="agree">
+                    <input id="Yes" type="radio" name="agree" value="Yes" checked> 
+                    <label for="Yep"></label>
+                    <label for="Yes">Да</label> <br>
+                </div>
+                <div class="agree">
+                    <input id="No" type="radio" name="agree" value="No"> 
+                    <label for="Nop"></label>
+                    <label for="No">Нет</label>
+                </div>
+
+        </fieldset>
+        <fieldset>
+            <legend>Отправка формы</legend>>
+                <input type="submit" name="registration" value="Зарегистрироваться">
+                <input type="reset" name="reset" value="Очистить форму"> 
+        </fieldset>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

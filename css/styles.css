@@ -1,0 +1,214 @@
+:root {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    }
+    
+    * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    }
+
+div:hover{ 
+    cursor: pointer;
+    border: 1px dashed red;
+}
+div {
+    border: 1px dashed transparent;
+    margin: 3px;
+}
+
+.box {
+    display: table;
+    
+}
+.column, .field {
+    display: table-cell;    
+}
+.column>div {
+    margin-top: 13px;
+    width: 100px;
+}
+.box:hover,
+.column:hover,
+.column>div:hover,
+.field:hover,
+.field>div:hover {
+    border: 1px dashed transparent;
+}
+
+
+fieldset {
+        width: 300px;
+        border: 2px double brown;
+        border-radius: 20px;
+        padding: 10px 2px;
+        text-align: left;
+        margin: 10px 5px;
+        background-color: rgba(245, 235, 220, 0.863);
+        
+    }
+fieldset>fieldset {
+    width: 350px;
+    background-color: rgba(243, 196, 174, 0.808);
+    box-shadow: inset 2px 3px 5px  black; 
+}
+
+
+
+legend {
+        background-color: rgb(211, 150, 150);
+        border-radius: 5px;
+        border: 2px double brown;
+        padding: 2px 10px;
+        text-align: right;
+        text-transform: uppercase;
+        box-shadow: 5px 5px 9px rgb(20, 17, 17);
+        text-shadow: .01em .01em rgb(27, 2, 2);
+}
+
+label {
+    margin-left: 5px;
+}
+label:hover, 
+input:hover,
+select:hover {
+    cursor: pointer;
+}
+
+input, select, textarea {    
+    margin: 3px;
+    font-size: 1em;
+    color: black;
+    border: 2px double brown;
+    padding: 1px;
+    background-color: rgba(214, 195, 195, 0.76);
+    border-radius: 5px;
+    
+}
+option {
+    background-color: brown;
+    color: rgb(216, 216, 189);
+    font-weight: bold;
+}
+
+ 
+input[type="submit"],
+input[type="reset"] {
+    margin: 5px;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px double brown;
+    box-shadow: 4px 3px 5px rgb(7, 7, 7),
+                inset 2px 1px 2px black;
+    text-shadow: 0 0 1px rgb(221, 212, 206);
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: rgba(230, 225, 225, 0.76);
+}
+
+input[type="submit"]:active,
+input[type="reset"]:active {
+    background-color: rgba(229, 155, 155, 0.76);
+    border: 2px double rgb(12, 12, 12);
+    box-shadow: 3px 3px 6px rgb(97, 2, 2),
+                inset 0 0 0;
+}
+
+
+.checkboxes input {
+    display: none;
+}
+.checkboxes label[for="classics"],
+.checkboxes label[for="sciences"],
+.checkboxes label[for="detectives"] {
+    border: 0.1em solid rgb(44, 43, 43);
+    border-radius: .1em;
+    display: inline-block;
+    width: .9em;
+    height: .9em; 
+    vertical-align: middle;
+    line-height: .6em;
+    background-color: rgb(167, 161, 161);
+}
+.checkboxes {
+    border: 1px dashed transparent;
+    margin: 3px;
+}
+
+.checkboxes label[for="classic"],
+.checkboxes label[for="science"],
+.checkboxes label[for="detective"] {
+    cursor: pointer;
+}
+.checkboxes input:checked+label[for="classics"],
+.checkboxes input:checked+label[for="sciences"],
+.checkboxes input:checked+label[for="detectives"],
+.checkboxes input:checked{
+    content: "\2713";
+    color: rgb(2, 199, 199);
+    font-weight: bold;
+    overflow: hidden;
+    border: .1em solid rgb(2, 199, 199);
+    background-color: #fff;
+    border-radius: .1em;
+    cursor: pointer;
+   
+}
+.checkboxes input:checked+label[for="classics"]::before,
+.checkboxes input:checked+label[for="sciences"]::before,
+.checkboxes input:checked+label[for="detectives"]::before,
+.checkboxes input:checked{
+    content: "\2713";
+}
+
+
+.agree input {
+    display: none;
+}
+.agree label[for="Yep"],
+.agree label[for="Nop"] {
+    display: inline-block;
+    height: .8em;
+    width: .8em;
+    border-radius: 50%;
+    background-color: grey;
+}
+.agree input:checked+label[for="Yep"],
+.agree input:checked+label[for="Nop"] {
+    border: 3px solid rgb(2, 199, 199);
+    background-color: #fff;  
+}
+
+
+div>input:invalid {
+    border-color: red;
+}
+div>input:required {
+    border: 1px solid rgb(252, 107, 155);
+    box-shadow: -4px -3px 3px rgb(241, 104, 127)  ;
+}
+
+input:required:valid {
+    border: 1px solid green;
+}
+
+
+
+
+
+
+
+
+
+
+
+   
+
