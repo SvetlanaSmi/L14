@@ -126,9 +126,7 @@ input[type="reset"]:active {
 .checkboxes input {
     display: none;
 }
-.checkboxes label[for="classics"],
-.checkboxes label[for="sciences"],
-.checkboxes label[for="detectives"] {
+.checkboxes .mark {
     border: 0.1em solid rgb(44, 43, 43);
     border-radius: .1em;
     display: inline-block;
@@ -143,15 +141,16 @@ input[type="reset"]:active {
     margin: 3px;
 }
 
+/* .checkboxes input:default+label[for="classic"] {
+    font-weight: bold;
+} */
+
 .checkboxes label[for="classic"],
 .checkboxes label[for="science"],
 .checkboxes label[for="detective"] {
     cursor: pointer;
 }
-.checkboxes input:checked+label[for="classics"],
-.checkboxes input:checked+label[for="sciences"],
-.checkboxes input:checked+label[for="detectives"],
-.checkboxes input:checked{
+.checkboxes input:checked+.mark {
     content: "\2713";
     color: rgb(2, 199, 199);
     font-weight: bold;
@@ -162,10 +161,7 @@ input[type="reset"]:active {
     cursor: pointer;
    
 }
-.checkboxes input:checked+label[for="classics"]::before,
-.checkboxes input:checked+label[for="sciences"]::before,
-.checkboxes input:checked+label[for="detectives"]::before,
-.checkboxes input:checked{
+.checkboxes input:checked+.mark::before {
     content: "\2713";
 }
 
@@ -186,14 +182,18 @@ input[type="reset"]:active {
     border: 3px solid rgb(2, 199, 199);
     background-color: #fff;  
 }
+/* .agree input:default+label[for="Yep"] {
+    font-weight: bold;
+} */
 
 
-div>input:invalid {
-    border-color: red;
-}
+
 div>input:required {
     border: 1px solid rgb(252, 107, 155);
     box-shadow: -4px -3px 3px rgb(241, 104, 127)  ;
+}
+div>input:invalid {
+    border-color: red;
 }
 
 input:required:valid {
