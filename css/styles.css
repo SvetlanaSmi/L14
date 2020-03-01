@@ -141,9 +141,9 @@ input[type="reset"]:active {
     margin: 3px;
 }
 
-/* .checkboxes input:default+label[for="classic"] {
+.checkboxes input:default~label[for="classic"] {
     font-weight: bold;
-} */
+}
 
 .checkboxes label[for="classic"],
 .checkboxes label[for="science"],
@@ -182,9 +182,9 @@ input[type="reset"]:active {
     border: 3px solid rgb(2, 199, 199);
     background-color: #fff;  
 }
-/* .agree input:default+label[for="Yep"] {
+.agree input:default~label[for="Yes"] {
     font-weight: bold;
-} */
+}
 
 
 
